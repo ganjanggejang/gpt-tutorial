@@ -14,10 +14,10 @@ def index():
         response = openai.Completion.create(
             model="text-davinci-003",
             prompt=generate_prompt(animal),
-            temperature=0.9,
+            temperature=1.0,
         )
         return redirect(url_for("index", result=response.choices[0].text))
-
+    # request.method == "GET"일 때
     result = request.args.get("result")
     return render_template("index.html", result=result)
 
@@ -34,4 +34,5 @@ Names:""".format(
         animal.capitalize()
     )
 
-app.run(host='0.0.0.0', port=81)
+if __name__ == "__main__":
+  app.run(host='0.0.0.0', port=81)
