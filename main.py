@@ -28,7 +28,7 @@ def index():
             {'role': 'user', 'content': generate_prompt_2(input_text)}
           ],
           temperature=0.7,
-          max_tokens=64,
+          max_tokens=128,
           top_p=1.0,
           frequency_penalty=0.0,
           presence_penalty=0.0
@@ -42,14 +42,15 @@ def index():
 
 
 
-  
+
 def generate_prompt_1(input_text):
     return """Summarize this for a high-school student: 
     {}
     """.format(input_text)
 
+
 def generate_prompt_2(input_text):
-    return """Pick 5 or so difficult keywords that require deeper learning of this text:
+    return """Pick 5 or so difficult keywords that require deeper learning of this text.:
     {}
     """.format(input_text)
 

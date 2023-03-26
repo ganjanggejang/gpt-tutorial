@@ -60,7 +60,18 @@ input[type="submit"] {
   text-align: center;
   cursor: pointer;
 }
+/* class="result" 에 대해 적용 */
 .result {
   font-weight: bold;
-  margin-top: 40px;
 }
+
+input[type="refresh"] {
+  padding: 12px 0;
+  color: #fff;
+  background-color: #8fe6d0;
+  border: none;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+}
+
