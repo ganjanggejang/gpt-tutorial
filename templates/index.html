@@ -13,14 +13,19 @@
   <a href="{{ url_for('index') }}"> <h3>Script Summarizing Bot</h3> </a>
   <form action="/" method="post">
     <input type="text" name="input_text" placeholder="Paste any script or article" required />
+    
     <input type="submit" value="Summarize" />
   </form>
   <!-- jinja 이용하여 파이썬 논리 사용 -->
   {% if result %}
-  <li>Summarized for you:</li>
-  <div class="result">{{ result }}</div>
-  <li>Keywords to learn more:</li>
-  <div class="keyword">{{ keyword }} </div>
+  <div class="result">
+    <li>Summarized for you:</li>
+    {{ result }}
+  </div>
+  <div class="keyword">
+    <li>Keywords to learn more:</li>
+    {{ keyword }} 
+  </div>
   {% endif %}
   <!-- endif endfor endblock 꼭 사용해주기 -->
 
